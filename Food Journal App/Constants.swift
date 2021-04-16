@@ -10,4 +10,5 @@ import Foundation
 struct K
 {
     static let goToSaveFoodVCSegues = "goToSaveFoodVC"
+    static let goToFoodJournalVCSegues = "goToFoodJournalVC"
 }

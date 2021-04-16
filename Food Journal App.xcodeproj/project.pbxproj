@@ -15,6 +15,11 @@
 		7F1FF5E026219E2F00A8C14F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1FF5DE26219E2F00A8C14F /* LaunchScreen.storyboard */; };
 		7FCD764E2627C6D300932A59 /* SaveFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD764D2627C6D300932A59 /* SaveFoodVC.swift */; };
 		7FCD765C2627E11B00932A59 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD765B2627E11B00932A59 /* Constants.swift */; };
+		7FEBD02D26291AB8002DACF6 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FEBD02C26291AB8002DACF6 /* image1.jpg */; };
+		7FEBD03026291E97002DACF6 /* FoodJournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBD02F26291E97002DACF6 /* FoodJournalVC.swift */; };
+		7FEBD03A26297076002DACF6 /* FoodJournalModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBD03826297076002DACF6 /* FoodJournalModel.xcdatamodeld */; };
+		7FEBD062262972C1002DACF6 /* Food+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBD060262972C1002DACF6 /* Food+CoreDataClass.swift */; };
+		7FEBD063262972C1002DACF6 /* Food+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBD061262972C1002DACF6 /* Food+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		7F1FF5E126219E2F00A8C14F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FCD764D2627C6D300932A59 /* SaveFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFoodVC.swift; sourceTree = "<group>"; };
 		7FCD765B2627E11B00932A59 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7FEBD02C26291AB8002DACF6 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		7FEBD02F26291E97002DACF6 /* FoodJournalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodJournalVC.swift; sourceTree = "<group>"; };
+		7FEBD03926297076002DACF6 /* FoodJournalModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodJournalModel.xcdatamodel; sourceTree = "<group>"; };
+		7FEBD060262972C1002DACF6 /* Food+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7FEBD061262972C1002DACF6 /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +54,10 @@
 		7F1FF5C726219E2E00A8C14F = {
 			isa = PBXGroup;
 			children = (
+				7FEBD060262972C1002DACF6 /* Food+CoreDataClass.swift */,
+				7FEBD061262972C1002DACF6 /* Food+CoreDataProperties.swift */,
 				7F1FF5D226219E2E00A8C14F /* Food Journal App */,
+				7FEBD02C26291AB8002DACF6 /* image1.jpg */,
 				7F1FF5D126219E2E00A8C14F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +81,7 @@
 				7F1FF5DE26219E2F00A8C14F /* LaunchScreen.storyboard */,
 				7F1FF5E126219E2F00A8C14F /* Info.plist */,
 				7FCD765B2627E11B00932A59 /* Constants.swift */,
+				7FEBD03826297076002DACF6 /* FoodJournalModel.xcdatamodeld */,
 			);
 			path = "Food Journal App";
 			sourceTree = "<group>";
@@ -77,6 +91,7 @@
 			children = (
 				7F1FF5D726219E2E00A8C14F /* WelcomeViewController.swift */,
 				7FCD764D2627C6D300932A59 /* SaveFoodVC.swift */,
+				7FEBD02F26291E97002DACF6 /* FoodJournalVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -139,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F1FF5E026219E2F00A8C14F /* LaunchScreen.storyboard in Resources */,
+				7FEBD02D26291AB8002DACF6 /* image1.jpg in Resources */,
 				7F1FF5DD26219E2F00A8C14F /* Assets.xcassets in Resources */,
 				7F1FF5DB26219E2E00A8C14F /* Main.storyboard in Resources */,
 			);
@@ -153,9 +169,13 @@
 			files = (
 				7FCD765C2627E11B00932A59 /* Constants.swift in Sources */,
 				7F1FF5D826219E2E00A8C14F /* WelcomeViewController.swift in Sources */,
+				7FEBD03026291E97002DACF6 /* FoodJournalVC.swift in Sources */,
+				7FEBD03A26297076002DACF6 /* FoodJournalModel.xcdatamodeld in Sources */,
 				7F1FF5D426219E2E00A8C14F /* AppDelegate.swift in Sources */,
 				7F1FF5D626219E2E00A8C14F /* SceneDelegate.swift in Sources */,
 				7FCD764E2627C6D300932A59 /* SaveFoodVC.swift in Sources */,
+				7FEBD062262972C1002DACF6 /* Food+CoreDataClass.swift in Sources */,
+				7FEBD063262972C1002DACF6 /* Food+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +377,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7FEBD03826297076002DACF6 /* FoodJournalModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7FEBD03926297076002DACF6 /* FoodJournalModel.xcdatamodel */,
+			);
+			currentVersion = 7FEBD03926297076002DACF6 /* FoodJournalModel.xcdatamodel */;
+			path = FoodJournalModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7F1FF5C826219E2E00A8C14F /* Project object */;
 }

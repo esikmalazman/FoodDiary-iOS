@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ex0-Tx-l63">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -24,14 +24,15 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUQ-ZO-bj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-70" y="-231"/>
+            <point key="canvasLocation" x="-51" y="-218"/>
         </scene>
         <!--CameraVC-->
         <scene sceneID="t4X-5j-dEy">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jZ1-QW-ab5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="CameraVC" id="8LY-g2-Jxe" customClass="WelcomeViewController" customModule="Food_Journal_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ous-8O-RTZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AT-md-Hnb">
@@ -76,31 +77,33 @@
                         <segue destination="zv6-no-gmn" kind="presentation" identifier="goToSaveFoodVC" modalPresentationStyle="fullScreen" id="oml-Bg-HGs"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jZ1-QW-ab5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857.97101449275374" y="499.55357142857139"/>
+            <point key="canvasLocation" x="-52" y="585"/>
         </scene>
         <!--Save FoodVC-->
         <scene sceneID="UCK-MB-WFY">
             <objects>
                 <viewController id="zv6-no-gmn" customClass="SaveFoodVC" customModule="Food_Journal_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n1a-P8-rbW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8le-U3-7mF">
-                                <rect key="frame" x="45" y="473" width="324" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insert journal description here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8le-U3-7mF">
+                                <rect key="frame" x="16" y="418" width="324" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nu7-qx-5xA">
-                                <rect key="frame" x="189" y="742" width="37" height="30"/>
+                                <rect key="frame" x="160" y="699" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneJournalButtonPressed:" destination="zv6-no-gmn" eventType="touchUpInside" id="xBp-ES-ZWL"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0xY-SP-Laz">
-                                <rect key="frame" x="16" y="94" width="324" height="277"/>
+                                <rect key="frame" x="45" y="133" width="324" height="277"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -109,18 +112,19 @@
                     </view>
                     <connections>
                         <outlet property="capturedImage" destination="0xY-SP-Laz" id="eSi-z3-75H"/>
+                        <outlet property="journalDescriptionTextField" destination="8le-U3-7mF" id="fhG-gu-N0F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggG-XO-e5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1789.8550724637682" y="499.55357142857139"/>
+            <point key="canvasLocation" x="1364" y="585"/>
         </scene>
         <!--FoodJournalVC-->
         <scene sceneID="cDL-7S-EcL">
             <objects>
-                <viewController title="FoodJournalVC" id="E43-ug-Mfd" sceneMemberID="viewController">
+                <viewController title="FoodJournalVC" id="E43-ug-Mfd" customClass="FoodJournalVC" customModule="Food_Journal_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1HZ-mv-Ssu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Food Journal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7o-FE-oG2">
@@ -153,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKI-hj-Suw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="714" y="-901"/>
+            <point key="canvasLocation" x="2120" y="-218"/>
         </scene>
     </scenes>
     <resources>
