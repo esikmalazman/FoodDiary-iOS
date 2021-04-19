@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SaveFoodVC: UIViewController
 {
@@ -22,15 +23,20 @@ class SaveFoodVC: UIViewController
     
     @IBOutlet weak var journalDescriptionTextField: UITextField!
     
+    //UIApplication.shared.delegate as! AppDelegate, allow access to app delegate
+    // .persistentContainer, allow access to persistent container(db)
+    //.viewContext, allow to manage reference to persistent container to store & retrieve from core data
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad()
     {
         
         super.viewDidLoad()
         capturedImage.image = receiveImage
+        //assign textfield delegate
         journalDescriptionTextField.delegate = self
-    
         
-        // Do any additional setup after loading the view.
+
     }
     
     
@@ -44,12 +50,13 @@ class SaveFoodVC: UIViewController
         //get date time string from date object
         let formatDate = dateFormatter.string(from : currentDate)
         print(journalDescriptionTextField.text!)
-        
         let description = journalDescriptionTextField.text
         
-      
-        
+ 
+//            let foodImage = UIImage.pngData(capturedImage) as NSData?
      
+        
+    
         //prevent empty textfield
         if  journalDescriptionTextField.text != ""
         {
@@ -60,6 +67,28 @@ class SaveFoodVC: UIViewController
         else
         {
             journalDescriptionTextField.placeholder = "Food Description?"
+        }
+        
+        //create data in core data
+        
+        //1.create a new food object in context
+        
+        let newFood = Food(context: self.context)
+        //assign data to property
+        newFood.foodDesc = description
+        newFood.date = formatDate
+        //convert UIImage to data
+        newFood.foodImg = receiveImage?.jpegData(compressionQuality: 1)
+        
+        //2. save data, through manage object context
+        do
+        {
+            print("Food is saved")
+            try self.context.save()
+        }
+        catch
+        {
+            print(error)
         }
         
     
