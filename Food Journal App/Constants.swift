@@ -9,6 +9,7 @@ import Foundation
 
 struct K
 {
+    static let reusableCellIdentifier = "ReusableCell"
     static let goToSaveFoodVCSegues = "goToSaveFoodVC"
     static let goToFoodJournalVCSegues = "goToFoodJournalVC"
 }

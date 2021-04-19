@@ -91,6 +91,12 @@ class SaveFoodVC: UIViewController
             print(error)
         }
         
+        //re-fetch the data
+        
+        //create notification to the notification center observer
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"),object: nil)
+        
+        
     
     }
     

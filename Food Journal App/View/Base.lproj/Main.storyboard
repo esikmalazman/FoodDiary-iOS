@@ -29,7 +29,6 @@
         <!--CameraVC-->
         <scene sceneID="t4X-5j-dEy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jZ1-QW-ab5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="CameraVC" id="8LY-g2-Jxe" customClass="WelcomeViewController" customModule="Food_Journal_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ous-8O-RTZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -77,6 +76,7 @@
                         <segue destination="zv6-no-gmn" kind="presentation" identifier="goToSaveFoodVC" modalPresentationStyle="fullScreen" id="oml-Bg-HGs"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jZ1-QW-ab5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-52" y="585"/>
         </scene>
@@ -154,10 +154,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Library" id="xLw-bV-XMH"/>
+                    <connections>
+                        <outlet property="tableView" destination="bFI-CS-aNa" id="Ay6-5N-JEs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKI-hj-Suw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2120" y="-218"/>
+            <point key="canvasLocation" x="2118.840579710145" y="-218.30357142857142"/>
         </scene>
     </scenes>
     <resources>
