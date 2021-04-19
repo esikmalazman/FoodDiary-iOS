@@ -54,8 +54,6 @@
 		7F1FF5C726219E2E00A8C14F = {
 			isa = PBXGroup;
 			children = (
-				7FEBD060262972C1002DACF6 /* Food+CoreDataClass.swift */,
-				7FEBD061262972C1002DACF6 /* Food+CoreDataProperties.swift */,
 				7F1FF5D226219E2E00A8C14F /* Food Journal App */,
 				7FEBD02C26291AB8002DACF6 /* image1.jpg */,
 				7F1FF5D126219E2E00A8C14F /* Products */,
@@ -73,10 +71,11 @@
 		7F1FF5D226219E2E00A8C14F /* Food Journal App */ = {
 			isa = PBXGroup;
 			children = (
+				7F5FE8E4262A68A400D3EE64 /* Model */,
 				7F1FF5D326219E2E00A8C14F /* AppDelegate.swift */,
 				7F1FF5D526219E2E00A8C14F /* SceneDelegate.swift */,
 				7FCD764B2627C6AD00932A59 /* Controller */,
-				7F1FF5D926219E2E00A8C14F /* Main.storyboard */,
+				7F5FE8E5262A68CA00D3EE64 /* View */,
 				7F1FF5DC26219E2F00A8C14F /* Assets.xcassets */,
 				7F1FF5DE26219E2F00A8C14F /* LaunchScreen.storyboard */,
 				7F1FF5E126219E2F00A8C14F /* Info.plist */,
@@ -84,6 +83,23 @@
 				7FEBD03826297076002DACF6 /* FoodJournalModel.xcdatamodeld */,
 			);
 			path = "Food Journal App";
+			sourceTree = "<group>";
+		};
+		7F5FE8E4262A68A400D3EE64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7FEBD060262972C1002DACF6 /* Food+CoreDataClass.swift */,
+				7FEBD061262972C1002DACF6 /* Food+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F5FE8E5262A68CA00D3EE64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F1FF5D926219E2E00A8C14F /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7FCD764B2627C6AD00932A59 /* Controller */ = {
