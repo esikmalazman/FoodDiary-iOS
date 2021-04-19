@@ -6,6 +6,7 @@
 //
 //
 
+//extension from food+CoreDataClass
 import Foundation
 import CoreData
 
@@ -13,10 +14,12 @@ import CoreData
 extension Food
 {
 
+    
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Food> {
         return NSFetchRequest<Food>(entityName: "Food")
     }
 
+    //contains attributes from entity created
     @NSManaged public var date: String?
     @NSManaged public var foodDesc: String?
     @NSManaged public var foodImg: Data?
