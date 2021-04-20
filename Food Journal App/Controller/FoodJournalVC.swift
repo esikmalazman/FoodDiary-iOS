@@ -37,6 +37,7 @@ class FoodJournalVC: UIViewController,UITableViewDataSource
 
         //assign table view to adopt delegate
         tableView.dataSource = self
+        tableView.delegate = self
         // Do any additional setup after loading the view.
         fetchFood()
     }
@@ -93,14 +94,47 @@ class FoodJournalVC: UIViewController,UITableViewDataSource
         return cell
         
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+
+}
+
+//manage user intereaction with tableview
+//MARK:- UITableViewDelegate
+
+extension FoodJournalVC:UITableViewDelegate
+{
+    //swipe to left action
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    {
+        //Create swipe action
+        
+        //UIContextualAction, allow an action to display when user swipe
+        //.destructive, action to perform delete data/ destructive task
+        let action = UIContextualAction(style: .destructive, title: "Delete")
+        { (action, view, completionHandler) in
+            
+            //1. Which food to delete
+            let foodToRemove = self.items![indexPath.row]
+            
+            //2. Remove the move
+            self.context.delete(foodToRemove)
+            
+            //3. Save the data
+            do
+            {
+            try self.context.save()
+            }
+            catch
+            {
+                print(error)
+            }
+            
+            //4. Refetch the data
+            self.fetchFood()
+        }
+       
+        
+        
+        return UISwipeActionsConfiguration(actions: [action])
     }
-    */
-
 }
