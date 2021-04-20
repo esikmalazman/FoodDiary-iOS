@@ -25,8 +25,16 @@ class FoodJournalVC: UIViewController,UITableViewDataSource
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         //listening for any notifcation that already send by sender from another VC
         NotificationCenter.default.addObserver(self, selector: #selector(fetchFood), name: NSNotification.Name(rawValue: "load"), object: nil)
+        
+        //register custom design n file to be able to use in table view
+        tableView.register(UINib(nibName: "FoodCell", bundle: nil), forCellReuseIdentifier: K.reusableCellIdentifier)
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 600
+
         //assign table view to adopt delegate
         tableView.dataSource = self
         // Do any additional setup after loading the view.
@@ -71,9 +79,17 @@ class FoodJournalVC: UIViewController,UITableViewDataSource
         //Get food from array
         let food = self.items![indexPath.row]
         //create a cell to return to table view
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.reusableCellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.reusableCellIdentifier, for: indexPath) as! FoodCell
+        cell.dateLabel.text = food.date
+        cell.descriptionLabel.text = food.foodDesc
+        
+        
+        // allows to remove
+        // Instance will be immediately deallocated because property ‘imageView’ is ‘weak’
+        //convert Data to UIImage
+        cell.foodImage.image = UIImage(data:food.foodImg!,scale:1.0)!
         //set cell text
-        cell.textLabel?.text = food.foodDesc
+//        cell.textLabel?.text = food.foodDesc
         return cell
         
     }

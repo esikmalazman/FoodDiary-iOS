@@ -77,7 +77,7 @@ class SaveFoodVC: UIViewController
         //assign data to property
         newFood.foodDesc = description
         newFood.date = formatDate
-        //convert UIImage to data
+        //convert UIImage to Data
         newFood.foodImg = receiveImage?.jpegData(compressionQuality: 1)
         
         //2. save data, through manage object context

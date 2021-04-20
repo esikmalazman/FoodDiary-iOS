@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0CDA58262E3FD8006CC743 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CDA56262E3FD8006CC743 /* FoodCell.swift */; };
+		7F0CDA59262E3FD8006CC743 /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CDA57262E3FD8006CC743 /* FoodCell.xib */; };
 		7F1FF5D426219E2E00A8C14F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1FF5D326219E2E00A8C14F /* AppDelegate.swift */; };
 		7F1FF5D626219E2E00A8C14F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1FF5D526219E2E00A8C14F /* SceneDelegate.swift */; };
 		7F1FF5D826219E2E00A8C14F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1FF5D726219E2E00A8C14F /* WelcomeViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F0CDA56262E3FD8006CC743 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		7F0CDA57262E3FD8006CC743 /* FoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
 		7F1FF5D026219E2E00A8C14F /* Food Journal App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Journal App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F1FF5D326219E2E00A8C14F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F1FF5D526219E2E00A8C14F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				7F1FF5D926219E2E00A8C14F /* Main.storyboard */,
+				7F0CDA56262E3FD8006CC743 /* FoodCell.swift */,
+				7F0CDA57262E3FD8006CC743 /* FoodCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F0CDA59262E3FD8006CC743 /* FoodCell.xib in Resources */,
 				7F1FF5E026219E2F00A8C14F /* LaunchScreen.storyboard in Resources */,
 				7FEBD02D26291AB8002DACF6 /* image1.jpg in Resources */,
 				7F1FF5DD26219E2F00A8C14F /* Assets.xcassets in Resources */,
@@ -190,6 +197,7 @@
 				7F1FF5D426219E2E00A8C14F /* AppDelegate.swift in Sources */,
 				7F1FF5D626219E2E00A8C14F /* SceneDelegate.swift in Sources */,
 				7FCD764E2627C6D300932A59 /* SaveFoodVC.swift in Sources */,
+				7F0CDA58262E3FD8006CC743 /* FoodCell.swift in Sources */,
 				7FEBD062262972C1002DACF6 /* Food+CoreDataClass.swift in Sources */,
 				7FEBD063262972C1002DACF6 /* Food+CoreDataProperties.swift in Sources */,
 			);
