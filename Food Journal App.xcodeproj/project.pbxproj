@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F0CDA58262E3FD8006CC743 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CDA56262E3FD8006CC743 /* FoodCell.swift */; };
 		7F0CDA59262E3FD8006CC743 /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CDA57262E3FD8006CC743 /* FoodCell.xib */; };
+		7F0CDA64262E620F006CC743 /* DetailFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CDA63262E620F006CC743 /* DetailFoodVC.swift */; };
 		7F1FF5D426219E2E00A8C14F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1FF5D326219E2E00A8C14F /* AppDelegate.swift */; };
 		7F1FF5D626219E2E00A8C14F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1FF5D526219E2E00A8C14F /* SceneDelegate.swift */; };
 		7F1FF5D826219E2E00A8C14F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1FF5D726219E2E00A8C14F /* WelcomeViewController.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		7F0CDA56262E3FD8006CC743 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		7F0CDA57262E3FD8006CC743 /* FoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
+		7F0CDA63262E620F006CC743 /* DetailFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFoodVC.swift; sourceTree = "<group>"; };
 		7F1FF5D026219E2E00A8C14F /* Food Journal App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Journal App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F1FF5D326219E2E00A8C14F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F1FF5D526219E2E00A8C14F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				7F1FF5D726219E2E00A8C14F /* WelcomeViewController.swift */,
 				7FCD764D2627C6D300932A59 /* SaveFoodVC.swift */,
 				7FEBD02F26291E97002DACF6 /* FoodJournalVC.swift */,
+				7F0CDA63262E620F006CC743 /* DetailFoodVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				7FCD765C2627E11B00932A59 /* Constants.swift in Sources */,
 				7F1FF5D826219E2E00A8C14F /* WelcomeViewController.swift in Sources */,
 				7FEBD03026291E97002DACF6 /* FoodJournalVC.swift in Sources */,
+				7F0CDA64262E620F006CC743 /* DetailFoodVC.swift in Sources */,
 				7FEBD03A26297076002DACF6 /* FoodJournalModel.xcdatamodeld in Sources */,
 				7F1FF5D426219E2E00A8C14F /* AppDelegate.swift in Sources */,
 				7F1FF5D626219E2E00A8C14F /* SceneDelegate.swift in Sources */,

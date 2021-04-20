@@ -18,6 +18,7 @@ class FoodJournalVC: UIViewController,UITableViewDataSource
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     //array to store fetch messages, data for table
     var items : [Food]?
+    var foodRows : Int?
    
     
     
@@ -103,6 +104,32 @@ class FoodJournalVC: UIViewController,UITableViewDataSource
 
 extension FoodJournalVC:UITableViewDelegate
 {
+    //take action on selected row
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        
+        foodRows = indexPath.row
+        //prefromSegues
+        self.performSegue(withIdentifier: K.goToDetailFoodVCSegues, sender: self)
+        
+        
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let foodInfo = self.items![foodRows!]
+        
+        if segue.identifier == K.goToDetailFoodVCSegues
+        {
+            let destinationVC = segue.destination as! DetailFoodVC
+            destinationVC.date = foodInfo.date
+            destinationVC.desc = foodInfo.foodDesc
+            destinationVC.image = UIImage(data:foodInfo.foodImg!,scale:1.0)!
+        }
+    }
+
+    
+    
     //swipe to left action
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
     {
