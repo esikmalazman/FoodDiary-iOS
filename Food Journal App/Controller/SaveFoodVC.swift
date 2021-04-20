@@ -21,6 +21,7 @@ class SaveFoodVC: UIViewController
 
     @IBOutlet weak var capturedImage: UIImageView!
     
+    @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var journalDescriptionTextField: UITextField!
     
     //UIApplication.shared.delegate as! AppDelegate, allow access to app delegate
@@ -32,9 +33,11 @@ class SaveFoodVC: UIViewController
     {
         
         super.viewDidLoad()
+        doneButton.layer.cornerRadius = 25.0
         capturedImage.image = receiveImage
         //assign textfield delegate
         journalDescriptionTextField.delegate = self
+        
         
 
     }

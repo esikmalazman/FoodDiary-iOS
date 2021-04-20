@@ -10,9 +10,19 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     var savedImage:UIImage?
+    let currentDate = Date()
+    let formatterDate = DateFormatter()
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var addButton: UIButton!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        addButton.layer.cornerRadius = 25.0
+        formatterDate.dateFormat = "EEEE"
+        let formatDate = formatterDate.string(from: currentDate)
+        print(formatDate)
+        dayLabel.text = formatDate
         // Do any additional setup after loading the view.
     }
     

@@ -13,6 +13,7 @@ class DetailFoodVC: UIViewController
     var date:String?
     var desc:String?
     var image : UIImage?
+    
     @IBOutlet weak var detailFoodDate: UILabel!
     @IBOutlet weak var detailFoodDescription: UILabel!
     @IBOutlet weak var detailFoodImage: UIImageView!
