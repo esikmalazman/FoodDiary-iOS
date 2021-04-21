@@ -1,4 +1,4 @@
-# FoodDiaryiOS
+# FoodJouriOS
 
 app that can capture photos of your favourite image & information about what you eat
 
