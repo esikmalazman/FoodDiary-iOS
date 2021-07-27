@@ -2,6 +2,9 @@
 
 app that can capture photos of your favourite image & information about what you eat
 
+## App Icon 
+![foojour](https://user-images.githubusercontent.com/59039044/127080687-70dfa2d7-407d-4ade-870b-9719a69394c8.png)
+
 # What did I learn
 
 1. Utilise Apple Core Data Framework to save user data at local storage (Create,Delete,Update,Retrieve)
