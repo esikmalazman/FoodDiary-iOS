@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ex0-Tx-l63">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TabVC-->
+        <scene sceneID="rNu-FM-z79">
+            <objects>
+                <tabBarController title="TabVC" id="Ex0-Tx-l63" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V5U-gg-sCC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="BrandPlaceHolderColor"/>
+                        <color key="barTintColor" name="BrandColors"/>
+                        <color key="selectedImageTintColor" name="BrandTextColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8LY-g2-Jxe" kind="relationship" relationship="viewControllers" id="7Me-2j-MMO"/>
+                        <segue destination="k6Y-Jg-JzP" kind="relationship" relationship="viewControllers" id="qmR-E1-vig"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUQ-ZO-bj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-51" y="-218"/>
+        </scene>
+        <!--CameraVC-->
+        <scene sceneID="t4X-5j-dEy">
+            <objects>
+                <viewController title="CameraVC" id="8LY-g2-Jxe" customClass="WelcomeViewController" customModule="Food_Journal_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ous-8O-RTZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="105" translatesAutoresizingMaskIntoConstraints="NO" id="QyQ-Qm-byD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlr-2A-q6M" userLabel="TopView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="186.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Gsr-QL-CzQ">
+                                                <rect key="frame" x="25" y="40" width="289" height="61"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="8AT-md-Hnb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="289" height="61"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="30"/>
+                                                        <color key="textColor" name="BrandTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Gsr-QL-CzQ" firstAttribute="top" secondItem="zlr-2A-q6M" secondAttribute="top" constant="40" id="0EH-eD-Dby"/>
+                                            <constraint firstItem="Gsr-QL-CzQ" firstAttribute="leading" secondItem="zlr-2A-q6M" secondAttribute="leading" constant="25" id="La4-Vf-Wv8"/>
+                                            <constraint firstAttribute="bottom" secondItem="Gsr-QL-CzQ" secondAttribute="bottom" constant="85.5" id="ocb-SZ-gMm"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gsr-QL-CzQ" secondAttribute="trailing" constant="100" id="qeL-El-jSJ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7UM-Xx-Sh6" userLabel="MiddleView">
+                                        <rect key="frame" x="0.0" y="291.5" width="414" height="186"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take photo, add journal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="FfJ-5j-6XA">
+                                                <rect key="frame" x="100" y="173" width="214.5" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                                <color key="textColor" name="BrandPlaceHolderColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="pAk-wf-NjL">
+                                                <rect key="frame" x="107" y="43" width="200" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="E41-S7-sUo"/>
+                                                    <constraint firstAttribute="height" constant="100" id="ttv-qv-fiE"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pAk-wf-NjL" firstAttribute="centerX" secondItem="7UM-Xx-Sh6" secondAttribute="centerX" id="OTu-yh-8Wn"/>
+                                            <constraint firstItem="FfJ-5j-6XA" firstAttribute="top" secondItem="pAk-wf-NjL" secondAttribute="bottom" constant="30" id="Wci-vm-5Io"/>
+                                            <constraint firstItem="FfJ-5j-6XA" firstAttribute="centerX" secondItem="7UM-Xx-Sh6" secondAttribute="centerX" id="jHK-FC-vWy"/>
+                                            <constraint firstItem="pAk-wf-NjL" firstAttribute="centerY" secondItem="7UM-Xx-Sh6" secondAttribute="centerY" id="qaL-PW-g6k"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3w-85-NUO" userLabel="BottomView">
+                                        <rect key="frame" x="0.0" y="582.5" width="414" height="186.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDn-tp-K22">
+                                                <rect key="frame" x="47" y="81" width="320" height="65"/>
+                                                <color key="backgroundColor" name="BrandButtonColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="320" id="E1M-2R-f7w"/>
+                                                    <constraint firstAttribute="height" constant="65" id="voQ-PJ-z0g"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                                <color key="tintColor" name="BrandButtonColor"/>
+                                                <state key="normal" title="Add journal">
+                                                    <color key="titleColor" name="BrandTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addJournalButtonPressed:" destination="8LY-g2-Jxe" eventType="touchUpInside" id="KLL-hR-rBU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BrandColors"/>
+                                        <constraints>
+                                            <constraint firstItem="cDn-tp-K22" firstAttribute="centerX" secondItem="x3w-85-NUO" secondAttribute="centerX" id="XbG-jT-pAg"/>
+                                            <constraint firstAttribute="bottom" secondItem="cDn-tp-K22" secondAttribute="bottom" constant="40.5" id="nuc-KH-avA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="x3w-85-NUO" secondAttribute="bottom" id="5w9-K2-YLG"/>
+                                    <constraint firstItem="7UM-Xx-Sh6" firstAttribute="centerX" secondItem="QyQ-Qm-byD" secondAttribute="centerX" id="Bgc-Kj-PWd"/>
+                                    <constraint firstItem="x3w-85-NUO" firstAttribute="top" secondItem="7UM-Xx-Sh6" secondAttribute="bottom" constant="105" id="C6X-JU-Bgk"/>
+                                    <constraint firstItem="zlr-2A-q6M" firstAttribute="top" secondItem="QyQ-Qm-byD" secondAttribute="top" id="EmF-vM-hly"/>
+                                    <constraint firstItem="zlr-2A-q6M" firstAttribute="leading" secondItem="QyQ-Qm-byD" secondAttribute="leading" id="Jt5-WR-ITQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="x3w-85-NUO" secondAttribute="trailing" id="XfQ-yZ-RVo"/>
+                                    <constraint firstItem="x3w-85-NUO" firstAttribute="leading" secondItem="QyQ-Qm-byD" secondAttribute="leading" id="l3t-jM-740"/>
+                                    <constraint firstItem="7UM-Xx-Sh6" firstAttribute="centerY" secondItem="QyQ-Qm-byD" secondAttribute="centerY" id="sbm-2L-UdV"/>
+                                    <constraint firstAttribute="trailing" secondItem="zlr-2A-q6M" secondAttribute="trailing" id="tsG-na-bWr"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oDZ-Wp-Qc7"/>
+                        <color key="backgroundColor" name="BrandColors"/>
+                        <constraints>
+                            <constraint firstItem="oDZ-Wp-Qc7" firstAttribute="bottom" secondItem="QyQ-Qm-byD" secondAttribute="bottom" id="2PJ-lO-YAZ"/>
+                            <constraint firstItem="QyQ-Qm-byD" firstAttribute="top" secondItem="oDZ-Wp-Qc7" secondAttribute="top" id="cTH-w1-mqb"/>
+                            <constraint firstItem="oDZ-Wp-Qc7" firstAttribute="trailing" secondItem="QyQ-Qm-byD" secondAttribute="trailing" id="m5s-ia-sBq"/>
+                            <constraint firstItem="QyQ-Qm-byD" firstAttribute="leading" secondItem="oDZ-Wp-Qc7" secondAttribute="leading" id="tNb-F8-L8T"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Journal" image="camera_1" id="CJx-VN-sPU">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="9"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="addButton" destination="cDn-tp-K22" id="vuh-jh-Kd4"/>
+                        <outlet property="dayLabel" destination="8AT-md-Hnb" id="UUg-Sh-8Ku"/>
+                        <segue destination="zv6-no-gmn" kind="presentation" identifier="goToSaveFoodVC" modalPresentationStyle="fullScreen" id="oml-Bg-HGs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jZ1-QW-ab5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52.173913043478265" y="583.92857142857144"/>
+        </scene>
+        <!--Save FoodVC-->
+        <scene sceneID="UCK-MB-WFY">
+            <objects>
+                <viewController id="zv6-no-gmn" customClass="SaveFoodVC" customModule="Food_Journal_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n1a-P8-rbW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="i6U-qB-OGD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLe-Tr-QaG" userLabel="topView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="393.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0xY-SP-Laz">
+                                                <rect key="frame" x="20" y="0.0" width="374" height="393.5"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="0xY-SP-Laz" firstAttribute="top" secondItem="aLe-Tr-QaG" secondAttribute="top" id="5zD-LG-bjC"/>
+                                            <constraint firstItem="0xY-SP-Laz" firstAttribute="centerX" secondItem="aLe-Tr-QaG" secondAttribute="centerX" id="To0-lj-F8A"/>
+                                            <constraint firstItem="0xY-SP-Laz" firstAttribute="leading" secondItem="aLe-Tr-QaG" secondAttribute="leading" constant="20" id="Zte-b8-FO0"/>
+                                            <constraint firstItem="0xY-SP-Laz" firstAttribute="centerY" secondItem="aLe-Tr-QaG" secondAttribute="centerY" id="hTw-fW-5Ag"/>
+                                            <constraint firstAttribute="trailing" secondItem="0xY-SP-Laz" secondAttribute="trailing" constant="20" id="ihd-6R-aXg"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="nnv-Xk-y8f">
+                                        <rect key="frame" x="25" y="458.5" width="364" height="393.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdl-zO-DzI" userLabel="middleView">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="164.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insert journal description here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8le-U3-7mF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="344" height="114.5"/>
+                                                        <color key="backgroundColor" name="BrandColors"/>
+                                                        <color key="tintColor" red="0.12941176469999999" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" name="BrandPlaceHolderColor"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                <color key="value" name="BrandTextColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="8le-U3-7mF" firstAttribute="top" secondItem="tdl-zO-DzI" secondAttribute="top" id="6ni-Ix-7qX"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8le-U3-7mF" secondAttribute="bottom" constant="50" id="Mlw-c5-TX7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8le-U3-7mF" secondAttribute="trailing" constant="20" id="jhG-Cf-TQh"/>
+                                                    <constraint firstItem="8le-U3-7mF" firstAttribute="leading" secondItem="tdl-zO-DzI" secondAttribute="leading" id="kmK-1i-zE8"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iro-8I-UJm" userLabel="bottomView">
+                                                <rect key="frame" x="0.0" y="229.5" width="364" height="164"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nu7-qx-5xA">
+                                                        <rect key="frame" x="22" y="50" width="320" height="65"/>
+                                                        <color key="backgroundColor" name="BrandButtonColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="320" id="CeV-7l-th1"/>
+                                                            <constraint firstAttribute="height" constant="65" id="Eu9-Dv-Qqb"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                                        <color key="tintColor" name="BrandTextColor"/>
+                                                        <state key="normal" title="Done"/>
+                                                        <connections>
+                                                            <action selector="doneJournalButtonPressed:" destination="zv6-no-gmn" eventType="touchUpInside" id="xBp-ES-ZWL"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Nu7-qx-5xA" firstAttribute="top" secondItem="iro-8I-UJm" secondAttribute="top" constant="50" id="H26-m3-b4R"/>
+                                                    <constraint firstItem="Nu7-qx-5xA" firstAttribute="centerX" secondItem="iro-8I-UJm" secondAttribute="centerX" id="hLS-OP-myQ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="iro-8I-UJm" firstAttribute="leading" secondItem="nnv-Xk-y8f" secondAttribute="leading" id="BDA-pA-HIi"/>
+                                            <constraint firstAttribute="trailing" secondItem="tdl-zO-DzI" secondAttribute="trailing" id="EaZ-iz-0a0"/>
+                                            <constraint firstAttribute="trailing" secondItem="iro-8I-UJm" secondAttribute="trailing" id="KRT-rG-NFG"/>
+                                            <constraint firstAttribute="bottom" secondItem="iro-8I-UJm" secondAttribute="bottom" id="Nz0-Do-Szh"/>
+                                            <constraint firstItem="tdl-zO-DzI" firstAttribute="leading" secondItem="nnv-Xk-y8f" secondAttribute="leading" id="RA6-WX-oge"/>
+                                            <constraint firstItem="tdl-zO-DzI" firstAttribute="top" secondItem="nnv-Xk-y8f" secondAttribute="top" id="pIf-jf-eWH"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aLe-Tr-QaG" firstAttribute="leading" secondItem="i6U-qB-OGD" secondAttribute="leading" id="2tw-Pi-2xI"/>
+                                    <constraint firstAttribute="trailing" secondItem="aLe-Tr-QaG" secondAttribute="trailing" id="ALy-Ud-GTa"/>
+                                    <constraint firstItem="aLe-Tr-QaG" firstAttribute="top" secondItem="i6U-qB-OGD" secondAttribute="top" id="NjA-WY-cDP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CNM-4w-aNc"/>
+                        <color key="backgroundColor" name="BrandColors"/>
+                        <constraints>
+                            <constraint firstItem="CNM-4w-aNc" firstAttribute="trailing" secondItem="i6U-qB-OGD" secondAttribute="trailing" id="3S6-ID-Lhp"/>
+                            <constraint firstItem="i6U-qB-OGD" firstAttribute="top" secondItem="CNM-4w-aNc" secondAttribute="top" id="Ley-Pj-RYF"/>
+                            <constraint firstAttribute="bottom" secondItem="i6U-qB-OGD" secondAttribute="bottom" id="OdP-FG-jON"/>
+                            <constraint firstItem="i6U-qB-OGD" firstAttribute="leading" secondItem="n1a-P8-rbW" secondAttribute="leading" id="ucK-Mh-Qlg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="capturedImage" destination="0xY-SP-Laz" id="eSi-z3-75H"/>
+                        <outlet property="doneButton" destination="Nu7-qx-5xA" id="FLZ-UZ-hXK"/>
+                        <outlet property="journalDescriptionTextField" destination="8le-U3-7mF" id="fhG-gu-N0F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggG-XO-e5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1362.3188405797102" y="583.92857142857144"/>
+        </scene>
+        <!--Library-->
+        <scene sceneID="FcL-f6-ffW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Library" id="k6Y-Jg-JzP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="mmI-zk-EMP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iux-mF-bVL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2118.840579710145" y="-218.30357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="151" height="151"/>
+        <image name="camera_1" width="35" height="35"/>
+        <namedColor name="BrandButtonColor">
+            <color red="0.86699998378753662" green="1" blue="0.7369999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandColors">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandPlaceHolderColor">
+            <color red="0.50199997425079346" green="0.50199997425079346" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandTextColor">
+            <color red="0.10599999874830246" green="0.125" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
