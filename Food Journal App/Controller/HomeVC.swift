@@ -7,28 +7,34 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class HomeVC: UIViewController {
     
-    var savedImage:UIImage?
-    let currentDate = Date()
-    let formatterDate = DateFormatter()
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
     
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        addButton.layer.cornerRadius = 25.0
-        formatterDate.dateFormat = "EEEE"
-        let formatDate = formatterDate.string(from: currentDate)
-        print(formatDate)
-        dayLabel.text = formatDate
-        // Do any additional setup after loading the view.
+    var savedImage:UIImage?
+    
+    private var displayCurrentDays : String {
+        get {
+            let currentDate = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "EEEE"
+            let formattedDate = dateFormatter.string(from: currentDate)
+            
+            return formattedDate
+        }
     }
     
-    @IBAction func addJournalButtonPressed(_ sender: UIButton)
-    {
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        renderView()
+    }
+    
+    @IBAction func addJournalButtonPressed(_ sender: UIButton) {
+        initCamera()
+    }
+    
+    func initCamera() {
         //view controller that manage system interfaces for taking pictures,videos,choosing media in library
         let picker = UIImagePickerController()
         //source type to be present by controller
@@ -39,25 +45,18 @@ class WelcomeViewController: UIViewController {
         picker.allowsEditing = true
         //present the camera
         present(picker, animated: true, completion: nil)
-        
-        
-        
     }
-    
 }
 
-extension WelcomeViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate
-{
+extension HomeVC : UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     //tells delegate user cancel pick operation
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController)
-    {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         //dismiss picker
         dismiss(animated: true, completion: nil)
     }
     //tells delegate user pick image/video
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
-    {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         //dismiss picker before setup other things
         dismiss(animated: true)
         
@@ -66,8 +65,7 @@ extension WelcomeViewController : UIImagePickerControllerDelegate,UINavigationCo
         //get image from dictionary
         //.originalImage, allows get image straight of camera
         //.editedImage, allows to get cropped image
-        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
-        {
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             //save image to variable
             savedImage = image
             print("Image receive")
@@ -75,25 +73,26 @@ extension WelcomeViewController : UIImagePickerControllerDelegate,UINavigationCo
             self.performSegue(withIdentifier: K.goToSaveFoodVCSegues, sender: self)
             
         }
-        
-        
-        
-        
     }
     //preparation for segues
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == K.goToSaveFoodVCSegues
-        {
+        if segue.identifier == K.goToSaveFoodVCSegues {
             let destinationVC = segue.destination as! SaveFoodVC
             //send image to other VC
             destinationVC.receiveImage = savedImage
         }
     }
-    
 }
 
+//MARK:- Private methods
 
+extension HomeVC {
+    
+    private func renderView() {
+        addButton.layer.cornerRadius = 25.0
+        dayLabel.text = displayCurrentDays
+    }
+}
 
