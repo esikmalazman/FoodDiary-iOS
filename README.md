@@ -1,4 +1,6 @@
-# FoodDiaryiOS
+![foojour](https://user-images.githubusercontent.com/59039044/127080687-70dfa2d7-407d-4ade-870b-9719a69394c8.png)
+
+# FoodDiary-iOS
 
 app that can capture photos of your favourite image & information about what you eat
 
