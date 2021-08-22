@@ -10,12 +10,12 @@ import UIKit
 struct PersistentManager {
     
     static let shared = PersistentManager()
+    
     //UIApplication.shared.delegate as! AppDelegate, allow access to app delegate
     // .persistentContainer, allow access to persistent container(db)
     //.viewContext, allow to manage reference to persistent container to store & retrieve from core data
-    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-
     func saveContext() {
         do {
             print("Item saved")
@@ -26,4 +26,9 @@ struct PersistentManager {
         }
     }
     
+    func deleteContext(for food : Food) {
+        print("Item deleted")
+        context.delete(food)
+        saveContext()
+    }
 }
