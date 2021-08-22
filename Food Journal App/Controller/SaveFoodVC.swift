@@ -36,11 +36,7 @@ class SaveFoodVC: UIViewController {
             return formattedDate
         }
     }
-    
-    //UIApplication.shared.delegate as! AppDelegate, allow access to app delegate
-    // .persistentContainer, allow access to persistent container(db)
-    //.viewContext, allow to manage reference to persistent container to store & retrieve from core data
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private let persistentManager = PersistentManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +53,7 @@ class SaveFoodVC: UIViewController {
         //create Food Object for data model in core data
         
         //1.create a new food object in context
-        let newFood = Food(context: self.context)
+        let newFood = Food(context: persistentManager.context)
         //assign data to property
         newFood.foodDesc = journalDescription
         newFood.date = currentDate
@@ -65,7 +61,7 @@ class SaveFoodVC: UIViewController {
         newFood.foodImg = receiveImage?.jpegData(compressionQuality: 1)
         
         //2. save data, through manage object context
-        PersistentManager.shared.saveContext()
+        persistentManager.saveContext()
     }
 }
 

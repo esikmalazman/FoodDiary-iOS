@@ -11,7 +11,7 @@
         <!--CameraVC-->
         <scene sceneID="t4X-5j-dEy">
             <objects>
-                <viewController title="CameraVC" id="8LY-g2-Jxe" customClass="WelcomeViewController" customModule="Food_Journal_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="CameraVC" id="8LY-g2-Jxe" customClass="HomeVC" customModule="Food_Journal_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ous-8O-RTZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

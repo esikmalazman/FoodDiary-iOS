@@ -10,9 +10,12 @@
 		7F0CDA58262E3FD8006CC743 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CDA56262E3FD8006CC743 /* FoodCell.swift */; };
 		7F0CDA59262E3FD8006CC743 /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CDA57262E3FD8006CC743 /* FoodCell.xib */; };
 		7F0CDA64262E620F006CC743 /* DetailFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CDA63262E620F006CC743 /* DetailFoodVC.swift */; };
+		7F1A651D26D247D00056B882 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A651B26D247D00056B882 /* Library.storyboard */; };
+		7F1A651F26D247F60056B882 /* Journal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A651E26D247F60056B882 /* Journal.storyboard */; };
+		7F1A652126D25FFF0056B882 /* PersistentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1A652026D25FFF0056B882 /* PersistentManager.swift */; };
 		7F1FF5D426219E2E00A8C14F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1FF5D326219E2E00A8C14F /* AppDelegate.swift */; };
 		7F1FF5D626219E2E00A8C14F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1FF5D526219E2E00A8C14F /* SceneDelegate.swift */; };
-		7F1FF5D826219E2E00A8C14F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1FF5D726219E2E00A8C14F /* WelcomeViewController.swift */; };
+		7F1FF5D826219E2E00A8C14F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1FF5D726219E2E00A8C14F /* HomeVC.swift */; };
 		7F1FF5DB26219E2E00A8C14F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1FF5D926219E2E00A8C14F /* Main.storyboard */; };
 		7F1FF5DD26219E2F00A8C14F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F1FF5DC26219E2F00A8C14F /* Assets.xcassets */; };
 		7F1FF5E026219E2F00A8C14F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1FF5DE26219E2F00A8C14F /* LaunchScreen.storyboard */; };
@@ -29,14 +32,18 @@
 		7F0CDA56262E3FD8006CC743 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		7F0CDA57262E3FD8006CC743 /* FoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
 		7F0CDA63262E620F006CC743 /* DetailFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFoodVC.swift; sourceTree = "<group>"; };
+		7F1A651C26D247D00056B882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Food Journal App/View/Base.lproj/Library.storyboard"; sourceTree = "<group>"; };
+		7F1A651E26D247F60056B882 /* Journal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Journal.storyboard; sourceTree = "<group>"; };
+		7F1A652026D25FFF0056B882 /* PersistentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentManager.swift; sourceTree = "<group>"; };
 		7F1FF5D026219E2E00A8C14F /* Food Journal App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Journal App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F1FF5D326219E2E00A8C14F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F1FF5D526219E2E00A8C14F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F1FF5D726219E2E00A8C14F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		7F1FF5D726219E2E00A8C14F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		7F1FF5DA26219E2E00A8C14F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F1FF5DC26219E2F00A8C14F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F1FF5DF26219E2F00A8C14F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F1FF5E126219E2F00A8C14F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FA087F2263F90D000C613FC /* Food Journal App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Food Journal App.entitlements"; sourceTree = "<group>"; };
 		7FCD764D2627C6D300932A59 /* SaveFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFoodVC.swift; sourceTree = "<group>"; };
 		7FCD765B2627E11B00932A59 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7FEBD02C26291AB8002DACF6 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
@@ -57,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F1A651A26D246AE0056B882 /* FoodCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F0CDA56262E3FD8006CC743 /* FoodCell.swift */,
+				7F0CDA57262E3FD8006CC743 /* FoodCell.xib */,
+			);
+			path = FoodCell;
+			sourceTree = "<group>";
+		};
 		7F1FF5C726219E2E00A8C14F = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +93,9 @@
 		7F1FF5D226219E2E00A8C14F /* Food Journal App */ = {
 			isa = PBXGroup;
 			children = (
+				7FA087F2263F90D000C613FC /* Food Journal App.entitlements */,
+				7FCD765B2627E11B00932A59 /* Constants.swift */,
+				7F1A652026D25FFF0056B882 /* PersistentManager.swift */,
 				7F5FE8E4262A68A400D3EE64 /* Model */,
 				7F1FF5D326219E2E00A8C14F /* AppDelegate.swift */,
 				7F1FF5D526219E2E00A8C14F /* SceneDelegate.swift */,
@@ -85,7 +104,6 @@
 				7F1FF5DC26219E2F00A8C14F /* Assets.xcassets */,
 				7F1FF5DE26219E2F00A8C14F /* LaunchScreen.storyboard */,
 				7F1FF5E126219E2F00A8C14F /* Info.plist */,
-				7FCD765B2627E11B00932A59 /* Constants.swift */,
 				7FEBD03826297076002DACF6 /* FoodJournalModel.xcdatamodeld */,
 			);
 			path = "Food Journal App";
@@ -104,8 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				7F1FF5D926219E2E00A8C14F /* Main.storyboard */,
-				7F0CDA56262E3FD8006CC743 /* FoodCell.swift */,
-				7F0CDA57262E3FD8006CC743 /* FoodCell.xib */,
+				7F1A651B26D247D00056B882 /* Library.storyboard */,
+				7F1A651E26D247F60056B882 /* Journal.storyboard */,
+				7F1A651A26D246AE0056B882 /* FoodCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,7 +132,7 @@
 		7FCD764B2627C6AD00932A59 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7F1FF5D726219E2E00A8C14F /* WelcomeViewController.swift */,
+				7F1FF5D726219E2E00A8C14F /* HomeVC.swift */,
 				7FCD764D2627C6D300932A59 /* SaveFoodVC.swift */,
 				7FEBD02F26291E97002DACF6 /* FoodJournalVC.swift */,
 				7F0CDA63262E620F006CC743 /* DetailFoodVC.swift */,
@@ -182,7 +201,9 @@
 				7F1FF5E026219E2F00A8C14F /* LaunchScreen.storyboard in Resources */,
 				7FEBD02D26291AB8002DACF6 /* image1.jpg in Resources */,
 				7F1FF5DD26219E2F00A8C14F /* Assets.xcassets in Resources */,
+				7F1A651D26D247D00056B882 /* Library.storyboard in Resources */,
 				7F1FF5DB26219E2E00A8C14F /* Main.storyboard in Resources */,
+				7F1A651F26D247F60056B882 /* Journal.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FCD765C2627E11B00932A59 /* Constants.swift in Sources */,
-				7F1FF5D826219E2E00A8C14F /* WelcomeViewController.swift in Sources */,
+				7F1FF5D826219E2E00A8C14F /* HomeVC.swift in Sources */,
 				7FEBD03026291E97002DACF6 /* FoodJournalVC.swift in Sources */,
 				7F0CDA64262E620F006CC743 /* DetailFoodVC.swift in Sources */,
 				7FEBD03A26297076002DACF6 /* FoodJournalModel.xcdatamodeld in Sources */,
@@ -203,6 +224,7 @@
 				7FCD764E2627C6D300932A59 /* SaveFoodVC.swift in Sources */,
 				7F0CDA58262E3FD8006CC743 /* FoodCell.swift in Sources */,
 				7FEBD062262972C1002DACF6 /* Food+CoreDataClass.swift in Sources */,
+				7F1A652126D25FFF0056B882 /* PersistentManager.swift in Sources */,
 				7FEBD063262972C1002DACF6 /* Food+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +232,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		7F1A651B26D247D00056B882 /* Library.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F1A651C26D247D00056B882 /* Base */,
+			);
+			name = Library.storyboard;
+			sourceTree = "<group>";
+		};
 		7F1FF5D926219E2E00A8C14F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -350,6 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Food Journal App/Food Journal App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CX2G82J2TK;
 				INFOPLIST_FILE = "Food Journal App/Info.plist";
@@ -359,8 +390,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esikmalazman.Food-Journal-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -369,6 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Food Journal App/Food Journal App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CX2G82J2TK;
 				INFOPLIST_FILE = "Food Journal App/Info.plist";
@@ -378,8 +411,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esikmalazman.Food-Journal-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
