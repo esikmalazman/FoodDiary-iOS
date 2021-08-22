@@ -7,40 +7,28 @@
 
 import UIKit
 
-class DetailFoodVC: UIViewController
-{
-
-    var date:String?
-    var desc:String?
-    var image : UIImage?
+class DetailFoodVC: UIViewController {
     
     @IBOutlet weak var detailFoodDate: UILabel!
     @IBOutlet weak var detailFoodDescription: UILabel!
     @IBOutlet weak var detailFoodImage: UIImageView!
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        detailFoodDate.text = date
-        detailFoodDescription.text = desc
-        detailFoodImage.image = image
-        
+    
+    var date : String?
+    var desc : String?
+    var image : UIImage?
 
-        // Do any additional setup after loading the view.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        renderView()
     }
     
-    @IBAction func backButtonPressed(_ sender: UIButton)
-    {
+    @IBAction func backButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func renderView() {
+        detailFoodDate.text = date
+        detailFoodDescription.text = desc
+        detailFoodImage.image = image
     }
-    */
-
 }
